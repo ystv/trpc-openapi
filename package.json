@@ -27,7 +27,7 @@
   "scripts": {
     "test": "tsc --noEmit && jest --verbose",
     "build": "rimraf dist && tsc -p tsconfig.build.json",
-    "postinstall": "rimraf examples && npm ci && npm run build"
+    "postinstall": "../../node_modules/.bin/rimraf examples && npm ci && npm run build"
   },
   "peerDependencies": {
     "@trpc/server": "^10.0.0",
