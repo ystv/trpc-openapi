@@ -1,6 +1,6 @@
 {
   "name": "trpc-openapi",
-  "version": "1.3.0-ystv.2",
+  "version": "1.3.0-ystv.3",
   "description": "tRPC OpenAPI",
   "author": "James Berry <jb@jamesbe.com>",
   "private": false,
@@ -27,7 +27,7 @@
   "scripts": {
     "test": "tsc --noEmit && jest --verbose",
     "build": "rimraf dist && tsc -p tsconfig.build.json",
-    "postinstall": "npm ci && npm run build"
+    "postinstall": "rimraf examples && npm ci && npm run build"
   },
   "peerDependencies": {
     "@trpc/server": "^10.0.0",
