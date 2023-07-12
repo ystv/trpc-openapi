@@ -11,7 +11,7 @@ const mergeInputs = (inputParsers: AnyZodObject[]): AnyZodObject => {
 };
 
 // `inputParser` & `outputParser` are private so this is a hack to access it
-export const getInputOutputParsers = (procedure: OpenApiProcedure) => {
+export const getInputOutputParsers: any = (procedure: OpenApiProcedure) => {
   const { inputs, output } = procedure._def;
   return {
     inputParser: inputs.length >= 2 ? mergeInputs(inputs as AnyZodObject[]) : inputs[0],
